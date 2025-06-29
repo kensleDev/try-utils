@@ -1,0 +1,15 @@
+{
+	"name": "utils",
+	"module": "index.ts",
+	"type": "module",
+	"devDependencies": {
+		"@types/bun": "latest",
+		"vitest": "^1.0.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@julian-i/try-error": "^0.1.6"
+	}
+}
