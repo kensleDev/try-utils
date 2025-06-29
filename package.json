@@ -1,15 +1,53 @@
 {
-	"name": "utils",
-	"module": "index.ts",
-	"type": "module",
-	"devDependencies": {
-		"@types/bun": "latest",
-		"vitest": "^1.0.0"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	},
-	"dependencies": {
-		"@julian-i/try-error": "^0.1.6"
-	}
+  "name": "@julian-i/utils",
+  "version": "0.0.2",
+  "description": "A collection of utility functions with comprehensive error handling",
+  "module": "index.ts",
+  "type": "module",
+  "main": "index.ts",
+  "types": "index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./string": "./src/string/index.ts",
+    "./number": "./src/number/index.ts",
+    "./fetch": "./src/fetch/index.ts"
+  },
+  "files": [
+    "index.ts",
+    "src/**/*.ts"
+  ],
+  "scripts": {
+    "build": "echo 'No build step needed for TypeScript source'",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:watch": "vitest watch",
+    "prepublishOnly": "bun run test:run",
+    "deploy:beta": "echo \"Have you bumped the version in package.json?\" && read -p \"Press enter to continue...\" && bun run build && bun run test:run && git add . && git commit -m \"chore: deploy beta v$(node -p \"require('./package.json').version\")\" && git push origin main",
+    "deploy:release": "echo \"Have you bumped the version in package.json?\" && read -p \"Press enter to continue...\" && bun run build && bun run test:run && git add . && git commit -m \"chore: release v$(node -p \"require('./package.json').version\")\" && git tag v$(node -p \"require('./package.json').version\") && git push origin main && git push origin v$(node -p \"require('./package.json').version\")"
+  },
+  "keywords": [
+    "utils",
+    "utilities",
+    "string",
+    "number",
+    "fetch",
+    "error-handling",
+    "typescript"
+  ],
+  "author": "Julian I",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kensledev/utils.git"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "vitest": "^1.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@julian-i/try-error": "file:../try-error"
+  }
 }
