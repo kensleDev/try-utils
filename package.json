@@ -1,6 +1,6 @@
 {
   "name": "@julian-i/utils",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A collection of utility functions with comprehensive error handling",
   "module": "index.ts",
   "type": "module",
@@ -48,6 +48,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@julian-i/try-error": "^0.1.8"
+    "@julian-i/try-error": "^0.1.9"
   }
 }
