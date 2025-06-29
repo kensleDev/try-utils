@@ -4,7 +4,7 @@
     "": {
       "name": "utils",
       "dependencies": {
-        "@julian-i/try-error": "^0.1.6",
+        "@julian-i/try-error": "^0.1.8",
       },
       "devDependencies": {
         "@types/bun": "latest",
@@ -66,7 +66,7 @@
 
     "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@1.5.0", "", {}, "sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ=="],
 
-    "@julian-i/try-error": ["@julian-i/try-error@0.1.6", "", { "peerDependencies": { "typescript": "^5.0.0" } }, "sha512-CaR+fzmZXG9TKHyVsl/TF77yNrMhqhPh+l4e1ZZvCz6/nuhVmiY4SoedvC89FWQtgVIevf5h2CvvGDwX/l1+Lg=="],
+    "@julian-i/try-error": ["@julian-i/try-error@0.1.8", "", { "peerDependencies": { "typescript": "^5.0.0" } }, "sha512-HSNLLK9+CmdLTLZPsjZf8ItvFE+XwsBJ7hEciTIyHZ9FkERVy3HDWB2G+xhNuN7SUm1KwZQR6kGE1hkA1c9cIg=="],
 
     "@rollup/rollup-android-arm-eabi": ["@rollup/rollup-android-arm-eabi@4.44.1", "", { "os": "android", "cpu": "arm" }, "sha512-JAcBr1+fgqx20m7Fwe1DxPUl/hPkee6jA6Pl7n1v2EFiktAHenTaXl5aIFjUIEsfn9w3HE4gK1lEgNGMzBDs1w=="],
 
