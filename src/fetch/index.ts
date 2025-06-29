@@ -1,4 +1,4 @@
-import { tryPromise } from "../../../try-error/src/try";
+import { tryPromise } from "@julian-i/try-error";
 
 export async function safeFetch<T>(
   url: string,

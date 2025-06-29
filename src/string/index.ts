@@ -1,4 +1,4 @@
-import { tryCatch } from "../../../try-error/src/try";
+import { tryCatch } from "@julian-i/try-error";
 
 interface StringValidationOptions {
   maxLength?: number;
