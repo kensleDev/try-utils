@@ -1,6 +1,6 @@
 {
   "name": "@julian-i/try-utils",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A collection of utility functions with comprehensive error handling, using the @julian-i/try-error pattern.",
   "module": "index.ts",
   "type": "module",
