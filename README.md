@@ -1,4 +1,27 @@
-# @julian-i/utils
+# @julian-i/try-utils
+
+All functions in this package use the [@julian-i/try-error](https://www.npmjs.com/package/@julian-i/try-error) pattern and return a tuple: `[result, error]`.
+
+This means you can safely destructure the result and handle errors without exceptions:
+
+```typescript
+import { camelCase } from "@julian-i/try-utils";
+
+const [result, error] = camelCase("hello_world");
+if (error) {
+  // Handle the error
+  console.error("Error:", error.message);
+} else {
+  // Use the result
+  console.log(result); // "helloWorld"
+}
+```
+
+See [@julian-i/try-error documentation](https://www.npmjs.com/package/@julian-i/try-error) for more details on the error-handling pattern and advanced utilities.
+
+---
+
+# @julian-i/try-utils
 
 A comprehensive collection of utility functions with robust error handling, built with TypeScript and inspired by functional programming principles.
 
@@ -13,7 +36,7 @@ A comprehensive collection of utility functions with robust error handling, buil
 ## Installation
 
 ```bash
-npm install @julian-i/utils
+npm install @julian-i/try-utils
 ```
 
 ## Usage
@@ -21,7 +44,12 @@ npm install @julian-i/utils
 ### String Utilities
 
 ```typescript
-import { capitalize, camelCase, snakeCase, truncate } from "@julian-i/utils";
+import {
+  capitalize,
+  camelCase,
+  snakeCase,
+  truncate,
+} from "@julian-i/try-utils";
 
 // Basic usage
 const [result, error] = capitalize("hello world");
@@ -49,7 +77,7 @@ import {
   randomInt,
   factorial,
   isPrime,
-} from "@julian-i/utils";
+} from "@julian-i/try-utils";
 
 // Validation
 const [num, error] = validateNumber("123", { min: 0, max: 1000 });
@@ -72,23 +100,15 @@ const [random, ____] = randomInt(1, 100); // Random number between 1-100
 ### Fetch Utilities
 
 ```typescript
-import { safeFetch } from "@julian-i/utils";
+import { safeFetch } from "@julian-i/try-utils";
 
 // Safe fetch with error handling
-const [response, error] = await safeFetch("https://api.example.com/data");
+const [data, error] = await safeFetch("https://api.example.com/data", {});
 if (error) {
   console.error("Fetch failed:", error.message);
 } else {
-  const data = await response.json();
-  console.log(data);
+  console.log("Fetched data:", data);
 }
-
-// With custom options
-const [result, _] = await safeFetch("https://api.example.com/post", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ key: "value" }),
-});
 ```
 
 ## API Reference

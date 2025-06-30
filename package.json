@@ -1,7 +1,7 @@
 {
-  "name": "@julian-i/utils",
-  "version": "0.0.7",
-  "description": "A collection of utility functions with comprehensive error handling",
+  "name": "@julian-i/try-utils",
+  "version": "0.0.1",
+  "description": "A collection of utility functions with comprehensive error handling, using the @julian-i/try-error pattern.",
   "module": "index.ts",
   "type": "module",
   "main": "index.ts",
@@ -32,7 +32,9 @@
     "number",
     "fetch",
     "error-handling",
-    "typescript"
+    "typescript",
+    "try-error",
+    "result-tuple"
   ],
   "author": "Julian I",
   "license": "MIT",
@@ -48,6 +50,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@julian-i/try-error": "^0.1.11"
+    "@julian-i/try-error": "^0.1.8"
   }
 }
