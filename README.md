@@ -1,28 +1,5 @@
 # @julian-i/try-utils
 
-All functions in this package use the [@julian-i/try-error](https://www.npmjs.com/package/@julian-i/try-error) pattern and return a tuple: `[result, error]`.
-
-This means you can safely destructure the result and handle errors without exceptions:
-
-```typescript
-import { camelCase } from "@julian-i/try-utils";
-
-const [result, error] = camelCase("hello_world");
-if (error) {
-  // Handle the error
-  console.error("Error:", error.message);
-} else {
-  // Use the result
-  console.log(result); // "helloWorld"
-}
-```
-
-See [@julian-i/try-error documentation](https://www.npmjs.com/package/@julian-i/try-error) for more details on the error-handling pattern and advanced utilities.
-
----
-
-# @julian-i/try-utils
-
 A comprehensive collection of utility functions with robust error handling, built with TypeScript and inspired by functional programming principles.
 
 ## Features
